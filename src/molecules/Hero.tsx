@@ -3,8 +3,8 @@ import Button from "../atoms/Button";
 
 const Hero = () => {
   return (
-    <div className="hero">
-      <div className="hero__text">
+    <div className="hero d-flex">
+      <div className="hero__text d-flex">
         <h1>Your Cozy Era</h1>
         <div>
           <p>Get peak comfy-chic </p>

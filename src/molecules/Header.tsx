@@ -2,9 +2,13 @@ import { useState } from "react";
 import Button from "../atoms/Button";
 import Image from "../atoms/Image";
 import { useAppSelector } from "../redux/hooks/hooks";
-import Link from "../atoms/Link";
+import { Link } from "react-router-dom";
 
-const Header = () => {
+type HeaderProps = {
+  toggleCart: () => void;
+};
+
+const Header = ({ toggleCart }: HeaderProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const { data } = useAppSelector((state) => state.cartProduct);
@@ -31,20 +35,20 @@ const Header = () => {
                   : ""
               }
             >
-              <Link href="/products/female">Women</Link>
+              <Link to="/products/female">Women</Link>
             </li>
             <li
               id={
                 window.location.href.includes("/products/male") ? "active" : ""
               }
             >
-              <Link href="/products/male">Men</Link>
+              <Link to="/products/male">Men</Link>
             </li>
             <li>
-              <Link href="#">About</Link>
+              <Link to="#">About</Link>
             </li>
             <li>
-              <Link href="#">Everworld Stories</Link>
+              <Link to="#">Everworld Stories</Link>
             </li>
           </ul>
         </div>
@@ -53,16 +57,14 @@ const Header = () => {
         <Button onClick={handleSidebarOpen} id="hamburger__btn">
           <Image src="/hamburger.png" id="hamburger__img" />
         </Button>
-        <Link href="/">
+        <Link to="/">
           <Image src="/Logo.png" alt="Logo" />
         </Link>
       </div>
       <div className="header__right d-flex align-items-center">
         <Image src="/search.png" alt="Search Icon" />
         <Image src="/User.png" alt="User Icon" />
-        <Link href="/cart">
-          <Image src="/cart.png" alt="Cart Icon" />
-        </Link>
+        <Image onClick={toggleCart} src="/cart.png" alt="Cart Icon" />
         {data.length > 0 && <span>({totalItems})</span>}
       </div>
     </div>
