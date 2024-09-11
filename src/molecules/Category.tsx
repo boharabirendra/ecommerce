@@ -2,13 +2,12 @@ import Image from "../atoms/Image";
 import { useEffect } from "react";
 import { fetchCategories } from "../redux/slice/categorySlice";
 import { useAppDispatch, useAppSelector } from "../redux/hooks/hooks";
-import Link from "../atoms/Link";
 import CategorySkeleton from "../skeleton/skeletons";
+import { Link } from "react-router-dom";
 
 const Category = () => {
   const dispatch = useAppDispatch();
   const { data, isLoading } = useAppSelector((state) => state.category);
-  console.log(data);
   useEffect(() => {
     dispatch(fetchCategories());
   }, [dispatch]);
@@ -30,7 +29,7 @@ const Category = () => {
                     src={item.image.includes("any") ? "/image.png" : item.image}
                     alt="Category name"
                   />
-                  <Link href="#">{item.name}</Link>
+                  <Link to="#">{item.name}</Link>
                 </>
               )}
             </div>

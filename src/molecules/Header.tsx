@@ -2,7 +2,7 @@ import { useState } from "react";
 import Button from "../atoms/Button";
 import Image from "../atoms/Image";
 import { useAppSelector } from "../redux/hooks/hooks";
-import { Link } from "react-router-dom";
+import Link from "../atoms/Link";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,20 +31,20 @@ const Header = () => {
                   : ""
               }
             >
-              <Link to="/products/female">Women</Link>
+              <Link href="/products/female">Women</Link>
             </li>
             <li
               id={
                 window.location.href.includes("/products/male") ? "active" : ""
               }
             >
-              <Link to="/products/male">Men</Link>
+              <Link href="/products/male">Men</Link>
             </li>
             <li>
-              <Link to="#">About</Link>
+              <Link href="#">About</Link>
             </li>
             <li>
-              <Link to="#">Everworld Stories</Link>
+              <Link href="#">Everworld Stories</Link>
             </li>
           </ul>
         </div>
@@ -53,14 +53,14 @@ const Header = () => {
         <Button onClick={handleSidebarOpen} id="hamburger__btn">
           <Image src="/hamburger.png" id="hamburger__img" />
         </Button>
-        <Link to="/">
+        <Link href="/">
           <Image src="/Logo.png" alt="Logo" />
         </Link>
       </div>
       <div className="header__right d-flex align-items-center">
         <Image src="/search.png" alt="Search Icon" />
         <Image src="/User.png" alt="User Icon" />
-        <Link to="/cart">
+        <Link href="/cart">
           <Image src="/cart.png" alt="Cart Icon" />
         </Link>
         {data.length > 0 && <span>({totalItems})</span>}
