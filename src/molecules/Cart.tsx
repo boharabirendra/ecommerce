@@ -69,7 +69,7 @@ const Cart = ({ isOpen, toggleCart }: CartProps) => {
                     ${item.product.price}
                   </span>
                 </div>
-                <div className="cart__right__bottom--quantity d-flex">
+                <div className="cart__right__bottom--quantity d-flex justify-content-between">
                   <Button
                     onClick={() => {
                       dispatch(decrement(item.product.id));
@@ -86,7 +86,7 @@ const Cart = ({ isOpen, toggleCart }: CartProps) => {
                       dispatch(increment(item.product.id));
                     }}
                     title="Increment"
-                    id="cart-btn"
+                    id="p0-btn"
                   >
                     <Image src="/Plus.png" />
                   </Button>
