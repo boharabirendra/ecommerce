@@ -1,0 +1,113 @@
+.skeleton__container {
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: rem(25);
+  padding-left: rem(50);
+  padding-right: rem(50);
+}
+
+.category__skeleton {
+  justify-content: space-between;
+  div {
+    width: rem(212);
+    height: rem(264);
+    margin-bottom: rem(20);
+    border-radius: rem(10);
+    background-color: getColor("white.80");
+    @extend .pulse-animation;
+  }
+  p {
+    width: rem(100);
+    height: rem(24);
+    border-radius: rem(10);
+    background-color: getColor("white.80");
+    @extend .pulse-animation;
+  }
+}
+
+// product skeleton css
+.product__skeleton {
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: rem(30);
+}
+
+// product detail skeleton
+
+.productdetail__skeleton {
+  margin-top: rem(50);
+  gap: rem(30);
+  justify-content: center;
+  flex-wrap: wrap;
+
+  &__left {
+    width: rem(500);
+    height: rem(600);
+    background-color: getColor("white.80");
+    border-radius: rem(10);
+    @extend .pulse-animation;
+  }
+
+  .right {
+    flex-direction: column;
+    gap: rem(25);
+    &__title__price {
+      flex-wrap: wrap;
+      gap: rem(20);
+    }
+
+    &__title {
+      width: rem(250);
+      height: rem(25);
+      border-radius: rem(10);
+      background-color: getColor("white.80");
+      @extend .pulse-animation;
+    }
+
+    &__price {
+      width: rem(80);
+      height: rem(25);
+      border-radius: rem(10);
+      background-color: getColor("white.80");
+      @extend .pulse-animation;
+    }
+
+    .rating {
+      gap: rem(24);
+
+      &__star {
+        width: rem(150);
+        height: rem(25);
+        border-radius: rem(10);
+        background-color: getColor("white.80");
+        @extend .pulse-animation;
+      }
+
+      &__review {
+        width: rem(120);
+        height: rem(25);
+        border-radius: rem(10);
+        background-color: getColor("white.80");
+        @extend .pulse-animation;
+      }
+    }
+
+    &__description {
+      width: rem(400);
+      height: rem(200);
+      border-radius: rem(10);
+      background-color: getColor("white.80");
+      @extend .pulse-animation;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .productdetail__skeleton__left {
+    width: rem(385);
+    height: rem(400);
+  }
+  .right__description {
+    width: rem(350);
+  }
+}

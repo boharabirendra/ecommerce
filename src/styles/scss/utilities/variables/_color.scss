@@ -1,0 +1,20 @@
+// Base Color
+$white: #ffffff !default;
+$black: #000000 !default;
+$red: #d0021b !default;
+
+$colorMap: (
+  "white": (
+    "base": $white,
+    "80": #dad7d7,
+  ),
+  "black": (
+    "base": $black,
+    "20": #dddbdc,
+    "30": #737373,
+    "50": #262626,
+  ),
+  "red": (
+    "base": $red,
+  ),
+);

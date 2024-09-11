@@ -1,0 +1,43 @@
+.listcard {
+  width: rem(330);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: rem(8);
+  border-radius: rem(4);
+
+  img {
+    width: 100%;
+    height: rem(392);
+    border-bottom: 1px solid getColor("black.20");
+    overflow: hidden;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  &__info {
+    gap: rem(10);
+  }
+
+  &__name {
+    font-size: rem(12);
+    font-weight: 400;
+    color: getColor("black.50");
+    display: -webkit-box;
+  }
+
+  &__price {
+    gap: rem(4);
+    font-size: rem(12);
+    &--new {
+      font-weight: 600;
+      color: getColor("black.50");
+    }
+
+    &--old {
+      font-weight: 400;
+      color: getColor("black.30");
+      text-decoration: line-through;
+    }
+  }
+}

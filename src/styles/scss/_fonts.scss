@@ -1,0 +1,28 @@
+/* fonts.scss */
+@font-face {
+  font-family: "Maison Neue";
+  src: url("/fonts/fonnts.com-Maison_Neue_Book.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Maison Neue";
+  src: url("/fonts/fonnts.com-Maison_Neue_Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Maison Neue";
+  src: url("/fonts/fonnts.com-Maison_Neue_Light.ttf") format("truetype");
+  font-weight: 300; /* Light weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Maison NeueMono";
+  src: url("/fonts/fonnts.com-Maison_Neue_Mono.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

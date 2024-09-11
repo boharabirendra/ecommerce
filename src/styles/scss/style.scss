@@ -1,0 +1,24 @@
+body {
+  font-family: "Maison Neue";
+}
+
+@import "./fonts";
+
+@import "./base/index";
+@import "./utilities/variables/index";
+@import "./utilities/functions/index";
+
+@import "./components/index";
+@import "./skeleton/index";
+
+@import "./animation";
+
+.main__container {
+  padding: rem(90) rem(42);
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}

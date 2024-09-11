@@ -1,0 +1,45 @@
+.banner {
+  background-color: getColor("black.base");
+  color: getColor("white.base");
+  padding: rem(7) rem(30);
+
+  &__middle {
+    gap: rem(4);
+    flex-grow: 1;
+    justify-content: center;
+    p {
+      font-size: rem(16);
+      font-weight: 600;
+    }
+
+    a {
+      gap: rem(4);
+      font-size: rem(12);
+      font-weight: 400;
+      color: getColor("white.base");
+    }
+  }
+
+  &__right {
+    gap: rem(12);
+    text-transform: uppercase;
+    font-size: rem(12);
+    font-weight: 400;
+    letter-spacing: rem(0.2);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banner {
+    padding: rem(10) rem(8);
+
+    &__left {
+      display: none;
+    }
+
+    &__middle {
+      flex-direction: column;
+      align-items: self-start;
+    }
+  }
+}

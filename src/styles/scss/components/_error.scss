@@ -1,0 +1,13 @@
+.error {
+  padding: rem(20) rem(30);
+  background-color: getColor("black.20");
+  border-radius: rem(10);
+  flex-direction: column;
+  gap: rem(24);
+
+  &__img {
+    img {
+      width: rem(50);
+    }
+  }
+}

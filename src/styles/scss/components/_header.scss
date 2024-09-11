@@ -1,0 +1,109 @@
+.header {
+  padding-left: rem(68);
+  padding-right: rem(68);
+  border-bottom: 1px solid getColor("black.20");
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  // header left section
+  &__left {
+    .navbar {
+      ul {
+        list-style: none;
+        li {
+          border-bottom: rem(2) solid getColor("white.base");
+
+          &:hover {
+            border-bottom: rem(2) solid getColor("black.base");
+          }
+
+          a {
+            padding: rem(20) rem(12);
+            display: inline-block;
+            text-decoration: none;
+            color: getColor("black.50");
+            font-size: rem(12);
+            font-weight: 400;
+            letter-spacing: rem(0.2);
+          }
+        }
+      }
+      #active {
+        border-color: getColor("black.base");
+      }
+    }
+  }
+
+  // header middle section
+  &__middle {
+    justify-content: center;
+  }
+
+  // header right section
+  &__right {
+    justify-content: end;
+    img {
+      padding: rem(12);
+      cursor: pointer;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+
+  // hamburger & mobile responsive
+  #hamburger__img {
+    width: rem(32);
+    padding-left: rem(8);
+    display: none;
+  }
+
+  .cross__btn {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    justify-content: space-between;
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: rem(4);
+    padding-right: rem(8);
+
+    &__left {
+      display: none;
+      z-index: 2;
+      top: rem(0);
+      bottom: rem(0);
+      right: rem(0);
+      left: rem(0);
+      padding-right: rem(70);
+      padding-top: rem(40);
+      position: fixed;
+      background-color: getColor("white.base");
+      .navbar__items {
+        flex-direction: column;
+      }
+    }
+
+    &__middle {
+      justify-content: start;
+      align-items: center;
+    }
+
+    .cross__btn {
+      position: absolute;
+      top: rem(10);
+      right: rem(10);
+    }
+
+    #hamburger__img,
+    .cross__btn {
+      display: block;
+    }
+
+    #d-block {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.btn {
+  padding: rem(12) rem(20);
+  background-color: getColor("white.base");
+  color: getColor("black.50");
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.w-fixed {
+  min-width: rem(220);
+}
+
+.secondary {
+  background-color: getColor("black.base");
+  color: getColor("white.base");
+}
+
+.rounded-sm {
+  border-radius: rem(8);
+}
+
+.rounded-lg {
+  border-radius: rem(30);
+}
+
+.ptb-4 {
+  padding-top: rem(4);
+  padding-bottom: rem(4);
+}
+
+.ptb-20 {
+  padding-top: rem(20);
+  padding-bottom: rem(20);
+}
+
+.border {
+  border: rem(1) solid getColor("black.20");
+}
+
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+#cart-btn {
+  padding: 0;
+}
+
+#hamburger__btn {
+  padding-left: rem(6);
+}

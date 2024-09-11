@@ -1,0 +1,30 @@
+.shopproduct {
+  padding: rem(80);
+  gap: rem(12);
+
+  &__products {
+    gap: rem(20);
+    flex-wrap: wrap;
+  }
+
+  &__text {
+    margin-bottom: rem(8);
+    &--top {
+      font-size: rem(12);
+      font-weight: 400;
+      color: getColor("black.30");
+    }
+
+    &--middel {
+      font-size: rem(32);
+      font-weight: 400;
+      color: getColor("black.base");
+    }
+
+    &--bottom {
+      font-size: rem(16);
+      font-weight: 400;
+      color: getColor("black.base");
+    }
+  }
+}
