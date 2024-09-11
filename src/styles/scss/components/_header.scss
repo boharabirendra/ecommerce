@@ -52,8 +52,8 @@
   }
 
   // hamburger & mobile responsive
-  #hamburger__img {
-    width: rem(32);
+  .hamburger__img {
+    width: rem(27);
     padding-left: rem(8);
     display: none;
   }
@@ -71,16 +71,14 @@
     padding-right: rem(8);
 
     &__left {
+      position: fixed;
       display: none;
       z-index: 2;
-      top: rem(0);
-      bottom: rem(0);
-      right: rem(0);
-      left: rem(0);
-      padding-right: rem(70);
-      padding-top: rem(40);
-      position: fixed;
+      top: rem(110);
+      width: 100%;
+      padding: rem(10);
       background-color: getColor("white.base");
+
       .navbar__items {
         flex-direction: column;
       }
@@ -88,21 +86,15 @@
 
     &__middle {
       justify-content: start;
-      align-items: center;
+      align-items: baseline;
+      gap: rem(10);
     }
 
-    .cross__btn {
-      position: absolute;
-      top: rem(10);
-      right: rem(10);
-    }
-
-    #hamburger__img,
-    .cross__btn {
+    .hamburger__img {
       display: block;
     }
 
-    #d-block {
+    .d-block {
       display: block;
     }
   }

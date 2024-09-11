@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Button from "../atoms/Button";
 import Image from "../atoms/Image";
 import { useAppSelector } from "../redux/hooks/hooks";
@@ -9,23 +9,47 @@ type HeaderProps = {
 };
 
 const Header = ({ toggleCart }: HeaderProps) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isNavOpen, setIsNavOpen] = useState(false);
+  const [y, setY] = useState(window.scrollY);
+
+  const handleHamClick = () => {
+    setIsNavOpen(!isNavOpen);
+  };
+
+  /** Handle navbar on scroll */
+  const handleNavigation = useCallback(
+    (e: any) => {
+      const window = e.currentTarget;
+      if (y > window.scrollY) {
+        setIsNavOpen(false);
+      } else if (y < window.scrollY) {
+        setIsNavOpen(false);
+      }
+      setY(window.scrollY);
+    },
+    [y]
+  );
+
+  useEffect(() => {
+    setY(window.scrollY);
+    window.addEventListener("scroll", handleNavigation);
+
+    return () => {
+      window.removeEventListener("scroll", handleNavigation);
+    };
+  }, [handleNavigation]);
 
   const { data } = useAppSelector((state) => state.cartProduct);
   const totalItems = data.reduce((accumulator, item) => {
     return accumulator + item.count;
   }, 0);
 
-  const handleSidebarOpen = () => {
-    setIsOpen((prev) => !prev);
-  };
-
   return (
     <div className="header align-items-center">
-      <div className="header__left" id={isOpen ? "d-block" : ""}>
-        <Button onClick={handleSidebarOpen}>
-          <Image src="/cross.png" className="cross__btn" />
-        </Button>
+      <div
+        className={`header__left ${isNavOpen && "d-block"}`}
+        onClick={handleHamClick}
+      >
         <div className="navbar">
           <ul className="navbar__items d-flex">
             <li
@@ -54,8 +78,11 @@ const Header = ({ toggleCart }: HeaderProps) => {
         </div>
       </div>
       <div className="header__middle d-flex">
-        <Button onClick={handleSidebarOpen} id="hamburger__btn">
-          <Image src="/hamburger.png" id="hamburger__img" />
+        <Button onClick={handleHamClick} id="p0-btn">
+          <Image
+            src={isNavOpen ? "/cross.png" : "/hamburger.png"}
+            className="hamburger__img"
+          />
         </Button>
         <Link to="/">
           <Image src="/Logo.png" alt="Logo" />

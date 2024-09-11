@@ -7,7 +7,6 @@ import Cart from "../molecules/Cart";
 
 const MainLayout = () => {
   const [isCartOpen, setCartOpen] = useState(false);
-
   const toggleCart = () => {
     setCartOpen(!isCartOpen);
   };
