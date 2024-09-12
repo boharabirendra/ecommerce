@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "../atoms/Button";
 import Image from "../atoms/Image";
 
@@ -9,13 +10,13 @@ const Footer = () => {
           <h3>Account</h3>
           <ul>
             <li>
-              <a href="#">Log In</a>
+              <Link to="#">Log In</Link>
             </li>
             <li>
-              <a href="#">Sign Up</a>
+              <Link to="#">Sign Up</Link>
             </li>
             <li>
-              <a href="#">Redeem a Gift Card</a>
+              <Link to="#">Redeem a Gift Card</Link>
             </li>
           </ul>
         </div>
@@ -24,25 +25,25 @@ const Footer = () => {
           <h3>Company</h3>
           <ul>
             <li>
-              <a href="#">About</a>
+              <Link to="#">About</Link>
             </li>
             <li>
-              <a href="#">Environmental Initiatives</a>
+              <Link to="#">Environmental Initiatives</Link>
             </li>
             <li>
-              <a href="#">Factories</a>
+              <Link to="#">Factories</Link>
             </li>
             <li>
-              <a href="#">DEI</a>
+              <Link to="#">DEI</Link>
             </li>
             <li>
-              <a href="#">Careers</a>
+              <Link to="#">Careers</Link>
             </li>
             <li>
-              <a href="#">International</a>
+              <Link to="#">International</Link>
             </li>
             <li>
-              <a href="#">Accessibility</a>
+              <Link to="#">Accessibility</Link>
             </li>
           </ul>
         </div>
@@ -51,16 +52,16 @@ const Footer = () => {
           <h3>Get Help</h3>
           <ul>
             <li>
-              <a href="#">Help Center</a>
+              <Link to="#">Help Center</Link>
             </li>
             <li>
-              <a href="#">Return Policy</a>
+              <Link to="#">Return Policy</Link>
             </li>
             <li>
-              <a href="#">Shipping Info</a>
+              <Link to="#">Shipping Info</Link>
             </li>
             <li>
-              <a href="#">Bulk Orders</a>
+              <Link to="#">Bulk Orders</Link>
             </li>
           </ul>
         </div>
@@ -69,26 +70,29 @@ const Footer = () => {
           <h3>Connect</h3>
           <ul>
             <li>
-              <a href="#">Facebook</a>
+              <Link to="#">Facebook</Link>
             </li>
             <li>
-              <a href="#">Instagram</a>
+              <Link to="#">Instagram</Link>
             </li>
             <li>
-              <a href="#">Twitter</a>
+              <Link to="#">Twitter</Link>
             </li>
             <li>
-              <a href="#">Affiliates</a>
+              <Link to="#">Affiliates</Link>
             </li>
             <li>
-              <a href="#">Our Stores</a>
+              <Link to="#">Our Stores</Link>
             </li>
           </ul>
         </div>
 
         <div className="footer__subscribe d-flex align-items-center">
           <input type="email" placeholder="Email Address" />
-          <Button typeof="submit" className="d-flex justify-content-center">
+          <Button
+            typeof="submit"
+            className="d-flex justify-content-center align-items-center"
+          >
             <Image src="/ArrowRight.png" />
           </Button>
         </div>
@@ -97,25 +101,25 @@ const Footer = () => {
       <div className="footer__bottom d-flex">
         <ul className="footer__legal">
           <li>
-            <a href="#">Privacy Policy</a>
+            <Link to="#">Privacy Policy</Link>
           </li>
           <li>
-            <a href="#">Terms of Service</a>
+            <Link to="#">Terms of Service</Link>
           </li>
           <li>
-            <a href="#">Do Not Sell or Share My Personal Information</a>
+            <Link to="#">Do Not Sell or Share My Personal Information</Link>
           </li>
           <li>
-            <a href="#">CS Supply Chain Transparency</a>
+            <Link to="#">CS Supply Chain Transparency</Link>
           </li>
           <li>
-            <a href="#">Vendor Code of Conduct</a>
+            <Link to="#">Vendor Code of Conduct</Link>
           </li>
           <li>
-            <a href="#">Sitemap Pages</a>
+            <Link to="#">Sitemap Pages</Link>
           </li>
           <li>
-            <a href="#">Sitemap Products</a>
+            <Link to="#">Sitemap Products</Link>
           </li>
         </ul>
         <p>© 2023 All Rights Reserved</p>

@@ -1,0 +1,13 @@
+.review__container {
+  .left__section {
+    background-color: #000;
+  }
+
+  .right__section {
+    img {
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+}

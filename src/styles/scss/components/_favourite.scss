@@ -1,0 +1,56 @@
+.favourite {
+  &__top {
+    text-align: center;
+    padding-top: rem(180);
+    margin-bottom: rem(30);
+    color: getcolor("black.base");
+    font-weight: 400;
+    &--title {
+      font-size: rem(24);
+      margin-bottom: rem(12);
+    }
+    &--subtitle {
+      font-size: rem(16);
+    }
+  }
+
+  &__content {
+    gap: rem(12);
+    overflow: hidden;
+
+    &__item {
+      width: rem(282);
+      font-size: rem(12);
+
+      &__info {
+        margin-bottom: rem(3);
+        font-weight: 400;
+
+        &--name,
+        &--price {
+          color: getColor("black.50");
+        }
+      }
+      &--color {
+        color: getColor("black.30");
+      }
+    }
+  }
+
+  &__bottom {
+    gap: rem(12);
+    margin-top: rem(50);
+    margin-bottom: rem(93);
+    &__item {
+      display: inline-block;
+      width: rem(7);
+      height: rem(7);
+      border-radius: 50%;
+      background-color: getColor("black.20");
+
+      &--dark {
+        background-color: getColor("black.base");
+      }
+    }
+  }
+}

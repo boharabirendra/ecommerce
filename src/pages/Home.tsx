@@ -1,5 +1,6 @@
 import Category from "../molecules/Category";
 import CategoryText from "../molecules/CategoryText";
+import Favourite from "../molecules/Favourite";
 import Hero from "../molecules/Hero";
 import LearnMore from "../molecules/LearnMore";
 
@@ -15,6 +16,7 @@ const Home = () => {
           buttonText="SHOP THE LATEST"
         />
         <LearnMore />
+        <Favourite />
       </div>
     </>
   );
