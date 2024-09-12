@@ -4,6 +4,7 @@ import Header from "../molecules/Header";
 import SubHeading from "../molecules/SubHeading";
 import { useState } from "react";
 import Cart from "../molecules/Cart";
+import Footer from "../molecules/Footer";
 
 const MainLayout = () => {
   const [isCartOpen, setCartOpen] = useState(false);
@@ -21,6 +22,9 @@ const MainLayout = () => {
       <main>
         <Outlet />
       </main>
+      <footer>
+        <Footer />
+      </footer>
       <Cart isOpen={isCartOpen} toggleCart={toggleCart} />
       {isCartOpen && <div className="backdrop" onClick={toggleCart}></div>}
     </div>
