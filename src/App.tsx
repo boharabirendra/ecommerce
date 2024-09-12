@@ -4,6 +4,7 @@ import ProductDetails from "./molecules/ProductDetails";
 import MansProduct from "./molecules/MensProducts";
 import WomansProduct from "./molecules/Women'sProducts";
 import MainLayout from "./layout/MainLayout";
+import About from "./molecules/About";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route path="/product/:id" element={<ProductDetails />} />
             <Route path="/products/female" element={<WomansProduct />} />
             <Route path="/products/male" element={<MansProduct />} />
+            <Route path="/about" element={<About />} />
           </Route>
         </Routes>
       </Router>

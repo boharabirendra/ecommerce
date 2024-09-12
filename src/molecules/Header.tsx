@@ -69,7 +69,7 @@ const Header = ({ toggleCart }: HeaderProps) => {
               <Link to="/products/male">Men</Link>
             </li>
             <li>
-              <Link to="#">About</Link>
+              <Link to="/about">About</Link>
             </li>
             <li>
               <Link to="#">Everworld Stories</Link>
