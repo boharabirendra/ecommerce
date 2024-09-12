@@ -27,6 +27,7 @@
   }
 
   &__price {
+    align-self: flex-start;
     gap: rem(4);
     font-size: rem(12);
     &--new {
