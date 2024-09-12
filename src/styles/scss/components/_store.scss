@@ -1,0 +1,43 @@
+.store {
+  padding: rem(76) rem(35);
+  &__top {
+    text-align: center;
+    color: getColor("black.base");
+    font-weight: 400;
+    &--title {
+      font-size: rem(32);
+      margin-bottom: rem(16);
+    }
+    &--subtitle {
+      font-size: rem(16);
+      margin-bottom: rem(64);
+    }
+  }
+
+  &__content {
+    gap: rem(30);
+    flex-wrap: wrap;
+    color: getColor("black.base");
+    font-weight: 400;
+
+    &--state {
+      font-size: rem(10);
+      text-transform: uppercase;
+      margin-top: rem(8);
+      margin-bottom: rem(4);
+    }
+
+    &--name {
+      font-size: rem(16);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .store__content {
+    align-items: center;
+    &--img {
+      width: rem(350);
+    }
+  }
+}

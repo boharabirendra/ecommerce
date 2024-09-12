@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Image from "../atoms/Image";
 
 const About = () => {
@@ -79,6 +80,32 @@ const About = () => {
             products—from materials to labor to transportation—then offer them
             to you, minus the traditional retail markup.
           </p>
+        </div>
+      </div>
+
+      <div className="about__explore">
+        <div className="about__explore__title">
+          <h1>More to Explore</h1>
+        </div>
+        <div className="about__explore__items d-flex justify-content-center">
+          <div className="about__explore__item d-flex">
+            <Link to="/shop">
+              <Image src="/explore1.png" />
+              <p className="about__explore__item--name">Our products</p>
+            </Link>
+          </div>
+          <div className="about__explore__item d-flex">
+            <Link to="/store">
+              <Image src="/explore2.png" />
+              <p className="about__explore__item--name">Our stores </p>
+            </Link>
+          </div>
+          <div className="about__explore__item d-flex">
+            <Link to="/careers">
+              <Image src="/explore3.png" />
+              <p className="about__explore__item--name">Careers</p>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

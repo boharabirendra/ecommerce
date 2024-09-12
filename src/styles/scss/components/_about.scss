@@ -40,6 +40,7 @@
     grid-template-columns: repeat(2, 1fr);
     img {
       width: 100%;
+      height: auto;
     }
     &__service {
       background-color: getColor("service.factory");
@@ -69,6 +70,38 @@
   &__service__img {
     img {
       width: 100%;
+    }
+  }
+
+  &__explore {
+    padding-top: rem(82);
+    padding-bottom: rem(82);
+
+    &__title {
+      h1 {
+        text-align: center;
+        font-size: rem(32);
+        color: getColor("black.base");
+        margin-bottom: rem(20);
+      }
+    }
+
+    &__items {
+      gap: rem(20);
+      flex-wrap: wrap;
+    }
+    &__item {
+      flex-direction: column;
+      gap: rem(10);
+      text-align: center;
+      a {
+        text-decoration: none;
+      }
+      p {
+        font-size: rem(16);
+        font-weight: 600;
+        color: getColor("black.40");
+      }
     }
   }
 }
