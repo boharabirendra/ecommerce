@@ -31,7 +31,7 @@ export const favourite: FavouriteProps[] = [
     color: "Vintage Black",
   },
   {
-    image: "/favourite2.png",
+    image: "/favourite5.png",
     name: "The Heavyweight",
     price: 30,
     color: "Heathered Brown",

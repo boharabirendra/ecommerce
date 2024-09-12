@@ -26,12 +26,23 @@
     a {
       text-decoration: underline;
       text-transform: uppercase;
-      font-size: rem(14);
       color: getColor("black.50");
+      p {
+        font-size: rem(14);
+      }
     }
   }
 }
 
 .skeleton__container {
   gap: rem(8);
+}
+
+@media screen and (max-width: 768px) {
+  .category__item {
+    img {
+      width: rem(350);
+      height: rem(450);
+    }
+  }
 }

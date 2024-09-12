@@ -19,7 +19,6 @@
     overflow: hidden;
 
     &__item {
-      width: rem(282);
       font-size: rem(12);
 
       &__info {
@@ -37,20 +36,11 @@
     }
   }
 
-  &__bottom {
-    gap: rem(12);
-    margin-top: rem(50);
-    margin-bottom: rem(93);
-    &__item {
-      display: inline-block;
-      width: rem(7);
-      height: rem(7);
-      border-radius: 50%;
-      background-color: getColor("black.20");
+  &__content::before {
+    content: url("/CaretLeft.png");
+  }
 
-      &--dark {
-        background-color: getColor("black.base");
-      }
-    }
+  &__content::after {
+    content: url("/CaretRight.png");
   }
 }

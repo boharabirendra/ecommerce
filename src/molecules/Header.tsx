@@ -68,7 +68,7 @@ const Header = ({ toggleCart }: HeaderProps) => {
             >
               <Link to="/products/male">Men</Link>
             </li>
-            <li>
+            <li id={window.location.href.includes("/about") ? "active" : ""}>
               <Link to="/about">About</Link>
             </li>
             <li>

@@ -1,0 +1,40 @@
+.everlane {
+  margin-top: rem(90);
+  &__top {
+    color: getColor("black.50");
+    font-weight: 400;
+    text-align: center;
+    &--title {
+      margin-bottom: rem(25);
+      font-size: rem(32);
+    }
+
+    &--text,
+    &--subtitle {
+      margin-bottom: rem(4);
+      font-size: rem(14);
+    }
+  }
+
+  &__content {
+    gap: rem(16);
+    flex-wrap: wrap;
+  }
+}
+
+.everlane__content::before {
+  content: url("/CaretLeft.png");
+}
+
+.everlane__content::after {
+  content: url("/CaretRight.png");
+}
+
+@media screen and (max-width: 768px) {
+  .everlane__content::before {
+    content: "";
+  }
+  .everlane__content::after {
+    content: "";
+  }
+}

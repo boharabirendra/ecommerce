@@ -5,35 +5,27 @@ type categoryProps = {
 
 export const category: categoryProps[] = [
   {
-    src: "/image.png",
-    name: "shirts",
+    src: "/mens.jpg",
+    name: "Men's",
   },
   {
-    src: "/image1.png",
-    name: "denim",
+    src: "/womens.jpg",
+    name: "Women's",
   },
   {
-    src: "/image2.png",
-    name: "tees ",
+    src: "/jewellery.jpg",
+    name: "Jewellery ",
   },
   {
-    src: "/image3.png",
-    name: "pants",
+    src: "/electronics.jpg",
+    name: "Electronics",
   },
   {
-    src: "/image4.png",
-    name: "SWEATERS",
+    src: "/womens.jpg",
+    name: "Women's",
   },
   {
-    src: "/image5.png",
-    name: "OUTERWEAR",
-  },
-  {
-    src: "/image2.png",
-    name: "tees ",
-  },
-  {
-    src: "/image3.png",
-    name: "pants",
+    src: "/jewellery.jpg",
+    name: "Jewellery ",
   },
 ];

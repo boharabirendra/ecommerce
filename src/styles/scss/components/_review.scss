@@ -1,13 +1,58 @@
-.review__container {
-  .left__section {
-    background-color: #000;
+.review {
+  gap: rem(136);
+  flex-wrap: wrap;
+
+  &__left {
+    align-self: center;
+    flex-direction: column;
+    font-weight: 400;
+    gap: rem(40);
+    &__top {
+      p {
+        font-size: rem(16);
+      }
+    }
+
+    &__middle {
+      max-width: rem(406);
+      img {
+        margin-bottom: rem(15);
+      }
+      p {
+        font-size: rem(24);
+      }
+    }
+
+    &__bottom {
+      p {
+        font-size: rem(14);
+      }
+      &--underline {
+        text-decoration: underline;
+      }
+    }
   }
 
-  .right__section {
+  &__right {
     img {
       max-width: 100%;
-      height: auto;
-      object-fit: cover;
     }
+  }
+}
+
+.review::before {
+  content: url("/CaretLeft.png");
+}
+
+.review::after {
+  content: url("/CaretRight.png");
+}
+
+@media screen and (max-width: 768px) {
+  .review::before {
+    content: "";
+  }
+  .review::after {
+    content: "";
   }
 }

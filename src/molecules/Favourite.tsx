@@ -1,5 +1,6 @@
 import Image from "../atoms/Image";
 import { favourite } from "../constants/favourite";
+import Dots from "./Dots";
 
 const Favourite = () => {
   return (
@@ -11,7 +12,6 @@ const Favourite = () => {
         </p>
       </div>
       <div className="favourite__content d-flex align-items-center justify-content-center">
-        <Image src="/CaretLeft.png" />
         {favourite.map((product, index) => (
           <div key={index} className="favourite__content__item">
             <Image src={product.image} />
@@ -28,14 +28,8 @@ const Favourite = () => {
             </div>
           </div>
         ))}
-        <Image src="/CaretRight.png" />
       </div>
-      <div className="favourite__bottom d-flex justify-content-center">
-        <span className="favourite__bottom__item favourite__bottom__item--dark"></span>
-        <span className="favourite__bottom__item"></span>
-        <span className="favourite__bottom__item"></span>
-        <span className="favourite__bottom__item"></span>
-      </div>
+      <Dots />
     </div>
   );
 };

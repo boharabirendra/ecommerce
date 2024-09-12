@@ -1,0 +1,23 @@
+.shipping {
+  margin-top: rem(90);
+  flex-wrap: wrap;
+  gap: rem(40);
+  &__item {
+    width: rem(350);
+    flex-direction: column;
+    font-size: rem(14);
+
+    &--title {
+      font-weight: 600;
+      margin-bottom: rem(4);
+    }
+
+    &--img {
+      margin-bottom: rem(20);
+    }
+
+    &--text {
+      font-weight: 400;
+    }
+  }
+}
