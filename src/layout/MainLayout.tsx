@@ -5,6 +5,7 @@ import SubHeading from "../molecules/SubHeading";
 import { useState } from "react";
 import Cart from "../molecules/Cart";
 import Footer from "../molecules/Footer";
+import ErrorBoundary from "../molecules/ErrorBoundary";
 
 const MainLayout = () => {
   const [isCartOpen, setCartOpen] = useState(false);
@@ -20,7 +21,9 @@ const MainLayout = () => {
         <SubHeading />
       </header>
       <main>
-        <Outlet />
+        <ErrorBoundary>
+          <Outlet />
+        </ErrorBoundary>
       </main>
       <footer>
         <Footer />
