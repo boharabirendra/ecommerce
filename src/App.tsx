@@ -6,6 +6,7 @@ import WomansProduct from "./molecules/Women'sProducts";
 import MainLayout from "./layout/MainLayout";
 import About from "./molecules/About";
 import Store from "./molecules/Store";
+import Blog from "./molecules/Blog";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/products/male" element={<MansProduct />} />
             <Route path="/about" element={<About />} />
             <Route path="/store" element={<Store />} />
+            <Route path="/blog" element={<Blog />} />
           </Route>
         </Routes>
       </Router>

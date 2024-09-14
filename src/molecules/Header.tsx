@@ -71,8 +71,8 @@ const Header = ({ toggleCart }: HeaderProps) => {
             <li id={window.location.href.includes("/about") ? "active" : ""}>
               <Link to="/about">About</Link>
             </li>
-            <li>
-              <Link to="#">Everworld Stories</Link>
+            <li id={window.location.href.includes("/blog") ? "active" : ""}>
+              <Link to="/blog">Everworld Stories</Link>
             </li>
           </ul>
         </div>

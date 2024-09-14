@@ -1,0 +1,119 @@
+.blog {
+  padding-top: rem(64);
+  padding-left: rem(60);
+  padding-right: rem(60);
+  &__top {
+    flex-direction: column;
+    color: getColor("black.base");
+    &--img {
+      text-align: center;
+      max-width: 100%;
+    }
+
+    &--title {
+      padding-top: rem(60);
+      padding-bottom: rem(16);
+      font-size: rem(160);
+      font-weight: 600;
+    }
+
+    &__desc {
+      padding-bottom: rem(64);
+      &--text {
+        font-weight: 400;
+        font-size: rem(24);
+        padding-bottom: rem(6);
+      }
+    }
+  }
+
+  &__latest {
+    padding-top: rem(120);
+    padding-bottom: rem(120);
+
+    &__items {
+      gap: rem(24);
+      flex-wrap: wrap;
+    }
+
+    &--title {
+      font-size: rem(54);
+      font-weight: 600;
+      margin-bottom: rem(12);
+    }
+
+    &__item {
+      width: rem(420);
+      &--img {
+        width: 100%;
+        padding-bottom: rem(20);
+      }
+      &--title {
+        font-size: rem(32);
+        font-weight: 400;
+        padding-bottom: rem(12);
+      }
+    }
+
+    &__btn {
+      text-align: center;
+    }
+  }
+
+  &__keep {
+    text-align: center;
+    img {
+      width: 100%;
+    }
+  }
+
+  &__progress {
+    padding-top: rem(120);
+    padding-bottom: rem(120);
+
+    &--title {
+      font-size: rem(54);
+      font-weight: 600;
+      margin-bottom: rem(12);
+    }
+
+    &__items {
+      flex-wrap: wrap;
+      gap: rem(24);
+    }
+
+    &__item {
+      width: rem(358);
+      &--img {
+        width: 100%;
+        margin-bottom: rem(12);
+      }
+
+      &--text {
+        font-size: rem(32);
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.social {
+  padding: rem(90) rem(60);
+  background-color: getColor("black.base");
+  &--title {
+    color: getColor("white.base");
+    font-size: rem(54);
+    font-weight: 600;
+    margin-bottom: rem(32);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .blog {
+    padding-left: rem(20);
+    padding-right: rem(20);
+    &__top--title {
+      font-size: rem(80);
+    }
+  }
+}
